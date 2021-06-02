@@ -49,7 +49,6 @@ for i in range(count):
     if num == 0:
         time_list = soup.find('div', 'timertotal').get_text().split(':')
         delay = int(time_list[0]) * 60 + int(time_list[1])
-        print(delay)
         time.sleep(delay + 1)
 
     for i in range(num):
