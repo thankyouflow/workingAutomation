@@ -11,6 +11,7 @@ for seq, name in enumerate(col_names):
 
 
 xlsx = pd.read_excel('/Users/tyflow/Downloads/scoreData.xlsx')
+print(xlsx)
 
 temp = list(xlsx['이름'])
 
