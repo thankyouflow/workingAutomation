@@ -10,8 +10,7 @@ for seq, name in enumerate(col_names):
     sheet.cell(row=1, column=seq+1, value=name)
 
 
-xlsx = pd.read_excel('/Users/tyflow/Downloads/scoreData.xlsx')
-print(xlsx)
+xlsx = pd.read_excel('/Users/tyflow/Downloads/FAT1_suhum.xlsx')
 
 temp = list(xlsx['이름'])
 
