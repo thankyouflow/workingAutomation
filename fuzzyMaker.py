@@ -27,10 +27,11 @@ while True:
       if check:
         if line[:2] == "DS":
           data = line.split("+")[1].split(".")[0].replace("\"", "").strip()
-          if 'A' in data.split("_")[0] or 'B' in data.split("_")[0]:
-            fuzzy2.append(data)
-          else:
-            fuzzy3.append(data)
+          if data != "FTBC_COM":
+            if 'A' in data.split("_")[0] or 'B' in data.split("_")[0]:
+              fuzzy2.append(data)
+            else:
+              fuzzy3.append(data)
 
   path = os.getcwd() + '/Downloads/fuzzyText'
   makedirs(path)
@@ -48,3 +49,5 @@ while True:
   f.close()
 
   print("파일 생성 위치 : " + path + "\n")
+
+# pyinstaller --onefile fuzzyMaker.py
