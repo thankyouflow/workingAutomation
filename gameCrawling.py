@@ -44,11 +44,12 @@ for i in range(1, len(posting) + 1):
   driver.execute_script("arguments[0].click();", vs_button)
 
   driver.get(url=driver.current_url)
-  
-  checking = driver.find_elements_by_xpath(
-    '// *[ @ id = "liveresults-sports-immersive__match-fullpage"]/div')
+  driver.implicitly_wait(10)
+
+
+  teamUrl = '//*[@id="liveresults-sports-immersive__match-fullpage"]/div/div[2]/div[4]/div[1]/div/div/div/div/div[1]/div/div[2]/div[1]/div/div[1]/div[2]/div'
+  checking = driver.find_elements_by_xpath(teamUrl)
   print(len(checking))
-  # teamUrl = '//*[@id="liveresults-sports-immersive__match-fullpage"]/div/div[2]/div[4]/div[1]/div/div/div/div/div[1]/div/div[2]/div[1]/div/div[1]/div[2]/div'
   #
   # try:
   #   team_button_check = WebDriverWait(driver, 10).until(EC.presence_of_element_located \
